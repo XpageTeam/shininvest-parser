@@ -1,0 +1,44 @@
+.default-btn, .white-btn
+	text-align: center
+	display: inline-block
+	user-select: none
+	padding: 9px 21px 8px
+	border-radius: 100px
+	font-size: em(12)
+
+.default-btn
+	border: 1px solid var(--main-color)
+	transition: background .3s ease, color .3s ease, border-color .3s ease	
+
+	&:not(&--bordered), &--bordered:hover
+
+		&:not(:active)
+			color: #fff var(--main-color)
+
+	&:not(.active):active, &.active
+		color: #fff var(--second-color) !important
+		border-color: var(--second-color)
+
+	// &.active
+		
+	// 	&:active
+	// 		color: #fff var(--main-color) !important
+	// 		border-color: var(--main-color)
+
+	&--bordered
+		background: none
+
+.white-btn
+	color: #000 #fff
+	transition: box-shadow .3s ease, color .3s ease, background .3s ease
+
+	&:not(:active)
+		box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.05)
+
+	&:hover
+
+		&:not(:active)
+			color: #fff var(--main-color)
+
+	&:active
+		color: #fff var(--second-color)

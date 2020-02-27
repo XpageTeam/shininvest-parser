@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Главная
+		include inc/head.pug
+		include inc/css.pug
+	body.main.loading
+		main#content
+			.wrapper
+				.parser
+					.parser__search
+						form(action="#")
+							.ps
+								.ps__selects
+									.form__inputs.form__inputs--7
+										each select, i in ["Производитель", "Ширина", "Профиль", "Диаметр", "Индекс скорости", "Индекс нагрузки", "Город", ]
+											.form__inputs-input
+												.default-input
+													if (i == 0)
+														select.default-input__input.default-input__input--select(multiple="")
+															option(value="0")=select
+															option(value="1")=select
+															option(value="2")=select
+															option(value="3")=select
+															option(value="4")=select
+													else
+														select.default-input__input.default-input__input--select
+															option(value="0")=select
+															option(value="1")=select
+															option(value="2")=select
+															option(value="3")=select
+															option(value="4")=select
+								.ps__search
+									.ps__search-search
+										.search-input
+											input.search-input__input(type="text" placeholder="Поиск...")
+											//- input.search-input__submit(type="submit")
+									.ps__search-btns
+										input.default-btn(type="submit" value="Пирменить")
+										input.default-btn.default-btn--bordered(type="submit" value="Сбросить")
+					.parser__settings
+						.parser-settings
+							.parser-settings__tabs
+								a.default-btn.active(href="#") Применить 1 правило
+								each title in ["Применить 2 правило", "Применить 3 правило", "Применить 4 правило", ] 
+									a.default-btn(href="#")=title
+							.parser-settings__config
+								.p-config
+									.p-config__btns
+										a.white-btn(href="#") Выбрать все
+										a.white-btn(href="#") Отменить выбор
+									.p-config__checkboxes
+		include inc/scripts.pug
