@@ -52,4 +52,40 @@ html(lang="ru")
 										a.white-btn(href="#") Отменить выбор
 									.p-config__checkboxes
 										.config-checkboxes
+											.config-checkboxes__item
+												.checkbox
+													input.checkbox__input(type="checkbox" checked="" id="che-0")
+													label.checkbox__label(for="che-0") 
+														span.checkbox__label-text Избранное
+											each checkbox, i in ["Шин. инв", "С предложениями по 1 правилу", "С предложениями по 2 правилу", "С предложениями по 3 правилу", "С предложениями по 4 правилу", ]
+												.config-checkboxes__item
+													.checkbox
+														input.checkbox__input(type="checkbox" id="che-"+(i + 1))
+														label.checkbox__label(for="che-"+(i + 1))
+															span.checkbox__label-text=checkbox
+					.parser__table
+						.parser__table-counter Выбрано строк:  
+							span  0
+						.parser__table-table
+							table.p-table
+								thead
+									tr 
+										each item in ["Параметры", "Колеса даром", "74 колеса", "Цефей", "Шина4машина", "Рулевой РФ", "Со колесо", "Альянс", "КовентПро", "Добрая шина", "Четыре точки", "Шининвест", "Действия", ]
+											if (item == "Шининвест")
+												th.highlighted-column=item
+											else
+												th=item
+								tbody
+									tr
+										td.t-parametrs
+											.t-parametrs__checkbox
+												.checkbox
+													input.checkbox__input(type="checkbox" checked="")
+													label.checkbox__label 
+														span.checkbox__label-text 41943 
+															br
+															| Bridgestone Blizzak Revo GZ (205/65/16/S/95) зима 2020-02-21T06:22:17+03:00
+										td
+									tr
+										td
 		include inc/scripts.pug
