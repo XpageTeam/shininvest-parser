@@ -42,3 +42,50 @@
 
 	&:active
 		color: #fff var(--second-color)
+
+
+
+
+
+
+
+
+
+
+.circle-button
+	border-radius: 50%
+	size: 30px
+	display: inline-flex
+	justify-content: center
+	align-items: center
+	color: #fff
+
+	+ .circle-button
+		margin-left: 6px
+
+	&:not(&--green)
+		background: var(--main-color)
+	
+	&--green
+		background: var(--thrid-color)
+
+	&__icon
+
+		svg
+			display: block
+
+
+
+
+
+
+
+
+
+
+.ico-remove
+	display: inline-block
+	border-radius: 50%
+	background: url("../img/ico-remove.svg") center no-repeat, #F44336
+	size: 19px
+	cursor: pointer
