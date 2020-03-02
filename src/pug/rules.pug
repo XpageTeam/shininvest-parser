@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Правила
+		include inc/head.pug
+		include inc/css.pug
+	body.main.loading
+		main#content
+			.wrapper
+				.rules-list
+					.rules-list__item
+						.rules-list__item-title
+							.rules-title Правило №1 - Увеличение цены
+						.rules-list__item-subtitle
+							.rules-subtitle Приоритеты конкуреннтов для правила “у конкурентов в наличии, значит применяем цену наивысшую”
+						.rules-list__item-content
+							.rule
+								.rule__table
+									table.r-table.r-table--1
+										thead
+											tr
+												each title in ["Колеса даром", "74 колеса", "Цефей", "Шина4машина", "Рулевой РФ", "Соколесо", "Альянс", "КовентПро", "Добрая шина", "Четыре точки", "Производитель", "Максимальный % изменения цены", "Максимальная сумма изменения цены", "Мод", ]
+													th=title
+										tbody
+											tr
+												td 4
+												td 5
+												td 6
+												td 3
+												td 7
+												td 8
+												td 9
+												td 8
+												td 2
+												td 2
+												td Continental
+												td 2
+												td 200
+												td Увеличение
+								.rule__inputs
+									.form__inputs.form__inputs--6
+										each title in ["Колеса даром", "74 колеса", "Цефей", "Шина4машина", "Рулевой РФ", "Соколесо", "Альянс", "КовентПро", "Добрая шина", "Четыре точки", "Максимальный % изменения цены", "Максимальная сумма изменения цены"]
+											.form__inputs-input
+												.default-input
+													input.default-input__input(type="text" value="4")
+													label.default-input__label=title
+										.form__inputs-input
+											.default-input
+												select.default-input__input.default-input__input--select(multiple="")
+													option(value="0") Производитель
+													option(value="1") Производитель
+													option(value="2") Производитель
+													option(value="3") Производитель
+													option(value="4") Производитель
+										.form__inputs-input
+											.default-input
+												select.default-input__input.default-input__input--select
+													option(value="0") Увеличен ие цены
+													option(value="1") Увеличен ие цены
+													option(value="2") Увеличен ие цены
+													option(value="3") Увеличен ие цены
+													option(value="4") Увеличен ие цены
+										.form__inputs-input.form__inputs-input--2
+											.rules-btns
+												input.default-btn(type="submit" value="Обновить")
+												input.green-btn(type="submit" value="Сохранить шаблон")
+					.rules-list__item
+						.rules-list__item-title
+							.rules-title Правило №2 - Уменьшение цены
+						.rules-list__item-content
+							.rule
+								.rule__table
+									table.r-table.r-table--2
+										thead
+											tr
+												each title in ["ID", "Город", "Производитель", "Процент", "Максимальная сумма", ]
+													th=title
+										tbody
+											tr
+												td 10
+												td Челябинск
+												td yokohama
+												td 3
+												td 2
+												td.btns-td
+													a.green-btn(href="#") Сохранить шаблон
+													a.green-btn.green-btn--bordered(href="#") Удалить
+								.rule__inputs
+									.form__inputs.form__inputs--6
+										.form__inputs-input
+											.default-input
+												select.default-input__input.default-input__input--select(multiple="")
+													option(value="0") Производитель
+													option(value="1") Производитель
+													option(value="2") Производитель
+													option(value="3") Производитель
+													option(value="4") Производитель
+										.form__inputs-input
+											.default-input
+												select.default-input__input.default-input__input--select
+													option(value="0") Увеличен ие цены
+													option(value="1") Увеличен ие цены
+													option(value="2") Увеличен ие цены
+													option(value="3") Увеличен ие цены
+													option(value="4") Увеличен ие цены
+										.form__inputs-input
+											.default-input
+												input.default-input__input(type="text" value="2")
+												label.default-input__label Максимальная сумма
+										.form__inputs-input
+											a.default-btn(href="#") Добавить
+										.form__inputs-input
+											.default-input
+												select.default-input__input.default-input__input--select
+													option(value="0") Выбрать шаблон
+													option(value="1") Выбрать шаблон
+													option(value="2") Выбрать шаблон
+													option(value="3") Выбрать шаблон
+													option(value="4") Выбрать шаблон
+					.rules-list__item
+						.rules-list__item-title
+							.rules-title Правило №3 - КПР
+						.rules-list__item-subtitle
+							.rules-subtitle Список активных правил “конкурент-произволитель =-размер”
+						.rules-list__item-content
+							.rule
+								.rule__table
+									table.r-table.r-table--3
+										thead
+											tr
+												each title in ["ID", "Конкурент", "Производитель", "Модель", "Ширина", "Профиль", "Диаметр", "Индекс скорости", "Индекс нагрузки", "Сезон", "Процент", "Действие", "", ]
+													th=title
+										tbody
+											tr
+												td 45
+												td 74 колеса
+												td Yokohama
+												td 
+												td  
+												td  
+												td  
+												td  
+												td  
+												td  
+												td 1%
+												td Уменьшение цены
+												td.btns-td
+													a.green-btn(href="#") Сохранить шаблон
+													a.green-btn.green-btn--bordered(href="#") Удалить
+								.rule__inputs
+									.form__inputs.form__inputs--6
+										each select in ["Конкурент", "Увеличение цены", "Модель", "Ширина", "Профиль", "Диаметр", "Индекс скорости", "Индекс нагрузки", "Сезон", "Действие", ]
+											.form__inputs-input
+												.default-input
+													select.default-input__input.default-input__input--select
+														option(value="0")=select
+														option(value="1")=select
+														option(value="2")=select
+														option(value="3")=select
+														option(value="4")=select
+										.form__inputs-input
+											.default-input
+												input.default-input__input(type="text")
+												label.default-input__label Процент
+										.form__inputs-input.form__inputs-input--2
+											.btn-select
+												a.default-btn(href="#") Добавить
+												.default-input
+													select.default-input__input.default-input__input--select
+														option(value="0") Выбрать шаблон
+														option(value="1") Выбрать шаблон
+														option(value="2") Выбрать шаблон
+														option(value="3") Выбрать шаблон
+														option(value="4") Выбрать шаблон 
+					.rules-list__item
+						.rules-list__item-title
+							.rules-title Правило №4 - Среднее арифметическое
+						.rules-list__item-content
+							.rule
+								.rule__table
+									table.r-table.r-table--4
+										thead
+											tr
+												each title in ["Первый конкурент", "Второй конкурент", "Производитель", "Модель", "Ширина", "Профиль", "Радиус", "Индекс скорости", "Индекс нагрузки", "Сезон",]
+													th=title
+										tbody
+											tr
+												td 4
+												td 6
+												td Bridgestone
+												td Blizzak Spike-01
+												td 33
+												td 25
+												td 15
+												td R
+												td 
+												td.btns-td
+													a.green-btn(href="#") Сохранить шаблон
+													a.green-btn.green-btn--bordered(href="#") Удалить
+											tr
+												td 4
+												td 6
+												td Yokohama
+												td A.drive AA01
+												td 205
+												td 55
+												td 
+												td 
+												td 
+												td.btns-td
+													a.green-btn(href="#") Сохранить шаблон
+													a.green-btn.green-btn--bordered(href="#") Удалить
+								.rule__inputs
+									.form__inputs.form__inputs--6
+										each input in ["Конкурент 1", "Конкурент 2", "Производитель", "Модель", "Ширина", "Профиль", "Диаметр", "Индекс скорости", "Индекс нагрузки", "Сезон", ]
+											.form__inputs-input
+												.default-input
+													input.default-input__input(type="text")
+													label.default-input__label=input
+										.form__inputs-input.form__inputs-input--2
+											.btn-select
+												a.default-btn(href="#") Добавить
+												.default-input
+													select.default-input__input.default-input__input--select
+														option(value="0") Выберите шаблон
+														option(value="1") Выберите шаблон
+														option(value="2") Выберите шаблон
+														option(value="3") Выберите шаблон
+														option(value="4") Выберите шаблон
+
+		include inc/scripts.pug										

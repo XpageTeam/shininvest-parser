@@ -1,10 +1,26 @@
-.default-btn, .white-btn
+.default-btn, .white-btn, .green-btn
 	text-align: center
 	display: inline-block
 	user-select: none
 	padding: 9px 21px 8px
 	border-radius: 100px
 	font-size: em(12)
+
+.green-btn
+	border: 1px solid var(--thrid-color)
+	transition: background .3s ease, color .3s ease, border-color .3s ease	
+
+	&:not(&--bordered), &--bordered:hover
+
+		&:not(:active)
+			color: #fff var(--thrid-color)
+
+	&:not(.active):active, &.active
+		color: #fff var(--main-color) !important
+		border-color: var(--main-color)
+
+	&--bordered
+		background: none
 
 .default-btn
 	border: 1px solid var(--main-color)
@@ -18,12 +34,6 @@
 	&:not(.active):active, &.active
 		color: #fff var(--second-color) !important
 		border-color: var(--second-color)
-
-	// &.active
-		
-	// 	&:active
-	// 		color: #fff var(--main-color) !important
-	// 		border-color: var(--main-color)
 
 	&--bordered
 		background: none

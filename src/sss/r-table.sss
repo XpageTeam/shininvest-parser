@@ -1,0 +1,76 @@
+.r-table
+	width: 100%
+	border-radius: 10px
+	background: #F5F6F9
+
+	&--1
+		table-layout: fixed
+
+	&--2
+
+		.btns-td
+			width: 55%
+
+	&--3
+
+		.btns-td
+			width: 322px
+
+	th, td
+		border: 1px solid var(--border-color)
+		
+		&:first-child
+			border-left: none
+
+		&:last-child
+			border-right: none
+
+	th
+		color: #8F97A2
+		text-align: left
+		padding: 10px 11px
+		border-top: none !important
+		font-size: 10px
+		font-weight: 600
+		vertical-align: middle
+
+	td
+		padding: 20px 15px
+		font-weight: 500
+		text-align: center
+
+	tr
+
+		&:last-child
+
+			td
+				border-bottom: none
+
+
+.btns-td
+	white-space: nowrap
+	text-align: left !important
+
+	.green
+
+		&-btn
+
+			&:not(:last-child)
+				margin-right: 15px
+
+.btn-select
+	display: flex
+	align-items: center
+	margin-top: auto
+
+	.default-input, .default-btn
+
+		&:not(:last-child)
+			margin-right: 30px
+
+	.default-btn
+		min-width: 168px
+
+	.default-input
+		flex: none
+		min-width: 242px

@@ -1,8 +1,9 @@
 .p-table
-	width: 100%
-	border-radius: 10px 
-	background: #F5F6F9
-	table-layout: fixed
+
+	table
+		width: 100%
+		border-radius: 10px 
+		background: #F5F6F9 !important
 	
 	thead
 		position: sticky
@@ -13,6 +14,7 @@
 	td, th
 		border: 1px solid var(--border-color)
 		vertical-align: middle
+		background: none !important
 
 		&:first-child
 			border-left: none
@@ -25,11 +27,12 @@
 		border-top: none
 		padding: 15px 10px 13px
 		font-size: em(10)
-		text-align: center
+		text-align: center !important
 	
 	td
 		position: relative
 		height: 140px
+		height: auto !important
 
 		> div
 			size: 100%
