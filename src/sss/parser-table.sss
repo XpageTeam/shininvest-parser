@@ -14,7 +14,9 @@
 	td, th
 		border: 1px solid var(--border-color)
 		vertical-align: middle
-		background: none !important
+
+		&:not(.highlighted-column)
+			background: none !important
 
 		&:first-child
 			border-left: none
@@ -48,8 +50,10 @@
 		font-weight: bold
 		font-size: em(16)
 
-		&:not(:last-child)
-			margin-top: 40px
+		a
+			color: inherit !important
+			text-decoration: none !important
+			border: none !important
 		
 		&--only
 			text-align: center
@@ -109,10 +113,10 @@
 
 
 .highlighted-row
-	background-color: #EDEFF5
+	background-color: #EDEFF5 !important
 
 .highlighted-column
-	background: rgba(89, 128, 246, 0.1)
+	background: rgba(89, 128, 246, .1) !important
 
 .bordered-td
 	border-bottom: 3px solid !important
