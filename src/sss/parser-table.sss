@@ -36,7 +36,7 @@
 		height: 140px
 		height: auto !important
 
-		> div
+		> div:first-child
 			size: 100%
 			display: flex
 			flex-direction: column
@@ -84,7 +84,7 @@
 
 .t-parametrs
 	font-size: em(10)
-	font-weight: 600
+	position: relative
 	
 	&__checkbox
 
@@ -93,6 +93,36 @@
 
 			&__label
 				line-height: calc(16 / 10)
+
+	&__anchor
+		position: absolute 15px 10px * *
+		size: 25px
+		background: url("../img/ico-anchor.svg") center no-repeat
+		cursor: pointer
+		z-index: 5
+
+		&:hover
+			background-color: var(--thrid-color)
+	
+	&__rules
+		margin: 0 -16px
+		background: rgba(89,128,246, .1)
+		display: flex
+		flex-direction: column
+		align-items: center
+		padding: 10px 16px
+		text-align: center
+
+		&:empty
+			display: none
+
+		> *:not(:first-child)
+			margin: 15px 0 0
+
+		> div 
+
+			> p
+				font-weight: 600
 
 .t-actions
 
@@ -129,3 +159,15 @@
 
 	&--blue
 		border-bottom-color: var(--main-color) !important
+
+
+
+.rule-popup
+
+	&__btns
+		margin: 20px 0
+
+		.green-btn
+
+			&:not(:last-child)
+				margin-right: 10px

@@ -65,8 +65,11 @@
 	display: flex
 	flex-direction: column
 
-	> .default-btn
-		margin: auto 0 5px
+	> .default-btn, > .v-input,
+		margin: auto 0 0
+	
+	> .v-input > .v-input__control
+		margin-top: auto !important
 
 	&--2
 

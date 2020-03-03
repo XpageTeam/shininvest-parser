@@ -17,6 +17,9 @@
 @import "rules-list.sss"
 @import "r-table.sss"
 
+.v-application
+	font: inherit !important
+
 .parser
 	padding: 50px 0 0
 
@@ -37,3 +40,25 @@
 
 .v-text-field__details
 	display: none !important
+
+
+.v-input__slot
+	margin: 0 !important
+
+.v-select.v-text-field input,
+.v-select__selection, .v-label
+	font-size: 12px !important
+
+
+.loading
+	
+	&:after
+		content: ""
+		position: fixed
+		top: 0
+		right: 0
+		left: 0
+		bottom: 0
+		background: url("../img/ico-loading-processed.svg") center no-repeat,rgba(255,255,255, .4)
+		background-size: 160px
+		z-index: 10
