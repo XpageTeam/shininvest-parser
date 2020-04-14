@@ -5,18 +5,15 @@
 		border-radius: 10px 
 		background: #F5F6F9 !important
 	
-	thead
-		position: sticky
-		top: 0
-		z-index: 3
-		background: inherit
+	// thead
+	// 	position: sticky
+	// 	top: 0
+	// 	z-index: 3
+	// 	background: inherit
 
 	td, th
 		border: 1px solid var(--border-color)
 		vertical-align: middle
-
-		&:not(.highlighted-column)
-			background: none !important
 
 		&:first-child
 			border-left: none
@@ -30,6 +27,9 @@
 		padding: 15px 10px 13px
 		font-size: em(10)
 		text-align: center !important
+
+		&:not(.highlighted-column)
+			background: #f5f6f9 !important
 	
 	td
 		position: relative
@@ -146,7 +146,7 @@
 	background-color: #EDEFF5 !important
 
 .highlighted-column
-	background: rgba(89, 128, 246, .1) !important
+	background: #e5eaf9 !important
 
 .bordered-td
 	border-bottom: 3px solid !important
